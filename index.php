@@ -96,7 +96,7 @@ include 'config/koneksi.php';
                             $cari = $_GET['cari'];
                             $query = mysqli_query($koneksi, "SELECT * FROM mahasiswa WHERE nama LIKE '%$cari%' ORDER BY id DESC");
                         } else {
-                            $query = mysqli_query($koneksi, "SELECT * FROM mahasiswa ORDER BY id DESC");
+                            $query = mysqli_query($koneksi, "SELECT * FROM mahasiswa ORDER BY nim DESC");
                         }
 
                         if(mysqli_num_rows($query) > 0) {
